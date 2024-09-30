@@ -1,58 +1,3 @@
-# µå·Ð Ä¿¹Ì¼Å´× ÇÁ·ÎÁ§Æ®
-
-ÀÌ ÇÁ·ÎÁ§Æ®´Â ¸¶ÀÌÅ©·ÎÄÁÆ®·Ñ·¯¿Í ½Ì±Û º¸µå ÄÄÇ»ÅÍ¸¦ È°¿ëÇÏ¿© µå·ÐÀ» Á¦¾îÇÏ°í µ¥ÀÌÅÍ¸¦ ¼öÁýÇÏ´Â Á¾ÇÕÀûÀÎ ½Ã½ºÅÛÀÔ´Ï´Ù. ÀÌ ½Ã½ºÅÛÀº Á¤¹ÐÇÑ ºñÇà Á¦¾î, ½Ç½Ã°£ µ¥ÀÌÅÍ ¼öÁý, ¿µ»ó Ã³¸® ±â´ÉÀ» ÅëÇÕÇÏ¿© ´Ù¾çÇÑ µå·Ð ÀÀ¿ë ºÐ¾ß¿¡ Àû¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-## ±¸¼º ¿ä¼Ò
-
-- **¸¶ÀÌÅ©·ÎÄÁÆ®·Ñ·¯**: °í¼º´É ¸¶ÀÌÅ©·ÎÄÁÆ®·Ñ·¯ º¸µå¸¦ »ç¿ëÇÏ¿© µå·ÐÀÇ ¸ðÅÍ¸¦ Á¤¹ÐÇÏ°Ô Á¦¾îÇÏ°í ´Ù¾çÇÑ ¼¾¼­·ÎºÎÅÍ µ¥ÀÌÅÍ¸¦ ¼öÁýÇÕ´Ï´Ù. ÀÌ º¸µå´Â IMU(°ü¼º ÃøÁ¤ ÀåÄ¡), ±â¾Ð°è, GPS µî ´Ù¾çÇÑ ¼¾¼­¿Í ÅëÇÕµÇ¾î µå·ÐÀÇ ¾ÈÁ¤ÀûÀÎ ºñÇàÀ» °¡´ÉÇÏ°Ô ÇÕ´Ï´Ù.
-
-- **½Ì±Û º¸µå ÄÄÇ»ÅÍ**: °í¼º´É ½Ì±Û º¸µå ÄÄÇ»ÅÍ¸¦ »ç¿ëÇÏ¿© º¹ÀâÇÑ µ¥ÀÌÅÍ Ã³¸®, ¿µ»ó ºÐ¼®, Åë½Å °ü¸® µîÀ» ¼öÇàÇÕ´Ï´Ù. ÀÌ ÄÄÇ»ÅÍ´Â ½Ç½Ã°£ ¿µ»ó ½ºÆ®¸®¹Ö, ÀÚÀ² ºñÇà ¾Ë°í¸®Áò ½ÇÇà, ¿ø°Ý Á¦¾î ÀÎÅÍÆäÀÌ½º Á¦°ø µî ´Ù¾çÇÑ °í±Þ ±â´ÉÀ» Áö¿øÇÕ´Ï´Ù.
-
-## ÁÖ¿ä ±â´É
-
-1. **Á¤¹Ð ºñÇà Á¦¾î**: PID Á¦¾î ¾Ë°í¸®ÁòÀ» »ç¿ëÇÏ¿© ¾ÈÁ¤ÀûÀÌ°í Á¤È®ÇÑ µå·Ð ºñÇàÀ» ±¸ÇöÇÕ´Ï´Ù.
-2. **½Ç½Ã°£ µ¥ÀÌÅÍ ¼öÁý**: ´Ù¾çÇÑ ¼¾¼­·ÎºÎÅÍ ºñÇà µ¥ÀÌÅÍ¸¦ ½Ç½Ã°£À¸·Î ¼öÁýÇÏ°í ºÐ¼®ÇÕ´Ï´Ù.
-3. **¿µ»ó Ã³¸® ¹× ºÐ¼®**: °íÇØ»óµµ Ä«¸Þ¶ó¸¦ ÅëÇØ ½Ç½Ã°£ ¿µ»óÀ» ÃÔ¿µÇÏ°í Ã³¸®ÇÏ¿© °´Ã¼ ÀÎ½Ä, °æ·Î °èÈ¹ µî¿¡ È°¿ëÇÕ´Ï´Ù.
-4. **¿ø°Ý ¸ð´ÏÅÍ¸µ ¹× Á¦¾î**: À¥ ±â¹Ý ÀÎÅÍÆäÀÌ½º¸¦ ÅëÇØ µå·ÐÀÇ »óÅÂ¸¦ ½Ç½Ã°£À¸·Î ¸ð´ÏÅÍ¸µÇÏ°í ¿ø°ÝÀ¸·Î Á¦¾îÇÒ ¼ö ÀÖ½À´Ï´Ù.
-5. **ÀÚÀ² ºñÇà ±â´É**: GPS µ¥ÀÌÅÍ¿Í ¼¾¼­ Á¤º¸¸¦ È°¿ëÇÏ¿© »çÀü ÇÁ·Î±×·¡¹ÖµÈ °æ·Î¸¦ ÀÚµ¿À¸·Î ºñÇàÇÒ ¼ö ÀÖ½À´Ï´Ù.
-6. **µ¥ÀÌÅÍ ·Î±ë ¹× ºÐ¼®**: ºñÇà Áß ¼öÁýµÈ ¸ðµç µ¥ÀÌÅÍ¸¦ ÀúÀåÇÏ°í ÈÄÃ³¸® ºÐ¼®À» À§ÇÑ µµ±¸¸¦ Á¦°øÇÕ´Ï´Ù.
-
-## ÆÄÀÏ ±¸Á¶
-
-- arduino_code/
-  - drone_controller/
-    - drone_controller.ino: ¸¶ÀÌÅ©·ÎÄÁÆ®·Ñ·¯¿ë ¸ÞÀÎ ÄÚµå
-    - sensor_module.h: ¼¾¼­ µ¥ÀÌÅÍ Ã³¸®¸¦ À§ÇÑ Çì´õ ÆÄÀÏ
-    - motor_control.h: ¸ðÅÍ Á¦¾î °ü·Ã ÇÔ¼öµéÀ» Æ÷ÇÔÇÑ Çì´õ ÆÄÀÏ
-    - pid_controller.h: PID Á¦¾î ¾Ë°í¸®Áò ±¸Çö
-- raspberry_pi_code/
-  - main.py: ½Ì±Û º¸µå ÄÄÇ»ÅÍÀÇ ¸ÞÀÎ ½ÇÇà ÆÄÀÏ
-  - drone_comm.py: µå·Ð°úÀÇ Åë½ÅÀ» °ü¸®ÇÏ´Â ¸ðµâ
-  - camera_module.py: Ä«¸Þ¶ó Á¦¾î ¹× ¿µ»ó Ã³¸® ¸ðµâ
-  - flight_controller.py: ºñÇà Á¦¾î ¾Ë°í¸®Áò ±¸Çö
-  - data_logger.py: ¼¾¼­ µ¥ÀÌÅÍ ·Î±ë ¹× ºÐ¼® ¸ðµâ
-  - web_interface/: À¥ ±â¹Ý ¸ð´ÏÅÍ¸µ ¹× Á¦¾î ÀÎÅÍÆäÀÌ½º
-
-## ¼³Ä¡ ¹× ¼³Á¤
-
-(¼³Ä¡ ¹× ¼³Á¤ ¹æ¹ý¿¡ ´ëÇÑ »ó¼¼ÇÑ ¾È³»¸¦ ¿©±â¿¡ Ãß°¡)
-
-## »ç¿ë ¹æ¹ý
-
-(½Ã½ºÅÛ »ç¿ë ¹æ¹ý¿¡ ´ëÇÑ ´Ü°èº° °¡ÀÌµå¸¦ ¿©±â¿¡ Ãß°¡)
-
-## ±â¿© ¹æ¹ý
-
-(ÇÁ·ÎÁ§Æ®¿¡ ±â¿©ÇÏ´Â ¹æ¹ý, ÄÚµå ½ºÅ¸ÀÏ °¡ÀÌµå, Ç® ¸®Äù½ºÆ® ÇÁ·Î¼¼½º µîÀ» ¼³¸í)
-
-## ¶óÀÌ¼±½º
-
-ÀÌ ÇÁ·ÎÁ§Æ®´Â MIT ¶óÀÌ¼±½º ÇÏ¿¡ ¹èÆ÷µË´Ï´Ù. ÀÚ¼¼ÇÑ ³»¿ëÀº LICENSE ÆÄÀÏÀ» ÂüÁ¶ÇÏ¼¼¿ä.
-
-## ¿¬¶ôÃ³
-
-ÇÁ·ÎÁ§Æ®¿¡ ´ëÇÑ Áú¹®ÀÌ³ª Á¦¾È»çÇ×ÀÌ ÀÖÀ¸½Ã¸é [gnt8521@gmail.com]·Î ¿¬¶ôÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.
-
 # Drone Commissioning Project
 
 This project is a comprehensive system that utilizes microcontrollers and single-board computers to control drones and collect data. The system integrates precise flight control, real-time data collection, and video processing capabilities, making it applicable to a wide range of drone applications.
@@ -106,4 +51,59 @@ This project is distributed under the MIT License. See the LICENSE file for more
 
 ## Contact
 
-If you have any questions or suggestions about the project, please contact us at [gnt8521@gmail.com].
+If you have any questions or suggestions about the project, please contact us at [email address].
+
+# ë“œë¡  ì»¤ë¯¸ì…”ë‹ í”„ë¡œì íŠ¸
+
+ì´ í”„ë¡œì íŠ¸ëŠ” ë§ˆì´í¬ë¡œì»¨íŠ¸ë¡¤ëŸ¬ì™€ ì‹±ê¸€ ë³´ë“œ ì»´í“¨í„°ë¥¼ í™œìš©í•˜ì—¬ ë“œë¡ ì„ ì œì–´í•˜ê³  ë°ì´í„°ë¥¼ ìˆ˜ì§‘í•˜ëŠ” ì¢…í•©ì ì¸ ì‹œìŠ¤í…œìž…ë‹ˆë‹¤. ì´ ì‹œìŠ¤í…œì€ ì •ë°€í•œ ë¹„í–‰ ì œì–´, ì‹¤ì‹œê°„ ë°ì´í„° ìˆ˜ì§‘, ì˜ìƒ ì²˜ë¦¬ ê¸°ëŠ¥ì„ í†µí•©í•˜ì—¬ ë‹¤ì–‘í•œ ë“œë¡  ì‘ìš© ë¶„ì•¼ì— ì ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+
+## êµ¬ì„± ìš”ì†Œ
+
+- **ë§ˆì´í¬ë¡œì»¨íŠ¸ë¡¤ëŸ¬**: ê³ ì„±ëŠ¥ ë§ˆì´í¬ë¡œì»¨íŠ¸ë¡¤ëŸ¬ ë³´ë“œë¥¼ ì‚¬ìš©í•˜ì—¬ ë“œë¡ ì˜ ëª¨í„°ë¥¼ ì •ë°€í•˜ê²Œ ì œì–´í•˜ê³  ë‹¤ì–‘í•œ ì„¼ì„œë¡œë¶€í„° ë°ì´í„°ë¥¼ ìˆ˜ì§‘í•©ë‹ˆë‹¤. ì´ ë³´ë“œëŠ” IMU(ê´€ì„± ì¸¡ì • ìž¥ì¹˜), ê¸°ì••ê³„, GPS ë“± ë‹¤ì–‘í•œ ì„¼ì„œì™€ í†µí•©ë˜ì–´ ë“œë¡ ì˜ ì•ˆì •ì ì¸ ë¹„í–‰ì„ ê°€ëŠ¥í•˜ê²Œ í•©ë‹ˆë‹¤.
+
+- **ì‹±ê¸€ ë³´ë“œ ì»´í“¨í„°**: ê³ ì„±ëŠ¥ ì‹±ê¸€ ë³´ë“œ ì»´í“¨í„°ë¥¼ ì‚¬ìš©í•˜ì—¬ ë³µìž¡í•œ ë°ì´í„° ì²˜ë¦¬, ì˜ìƒ ë¶„ì„, í†µì‹  ê´€ë¦¬ ë“±ì„ ìˆ˜í–‰í•©ë‹ˆë‹¤. ì´ ì»´í“¨í„°ëŠ” ì‹¤ì‹œê°„ ì˜ìƒ ìŠ¤íŠ¸ë¦¬ë°, ìžìœ¨ ë¹„í–‰ ì•Œê³ ë¦¬ì¦˜ ì‹¤í–‰, ì›ê²© ì œì–´ ì¸í„°íŽ˜ì´ìŠ¤ ì œê³µ ë“± ë‹¤ì–‘í•œ ê³ ê¸‰ ê¸°ëŠ¥ì„ ì§€ì›í•©ë‹ˆë‹¤.
+
+## ì£¼ìš” ê¸°ëŠ¥
+
+1. **ì •ë°€ ë¹„í–‰ ì œì–´**: PID ì œì–´ ì•Œê³ ë¦¬ì¦˜ì„ ì‚¬ìš©í•˜ì—¬ ì•ˆì •ì ì´ê³  ì •í™•í•œ ë“œë¡  ë¹„í–‰ì„ êµ¬í˜„í•©ë‹ˆë‹¤.
+2. **ì‹¤ì‹œê°„ ë°ì´í„° ìˆ˜ì§‘**: ë‹¤ì–‘í•œ ì„¼ì„œë¡œë¶€í„° ë¹„í–‰ ë°ì´í„°ë¥¼ ì‹¤ì‹œê°„ìœ¼ë¡œ ìˆ˜ì§‘í•˜ê³  ë¶„ì„í•©ë‹ˆë‹¤.
+3. **ì˜ìƒ ì²˜ë¦¬ ë° ë¶„ì„**: ê³ í•´ìƒë„ ì¹´ë©”ë¼ë¥¼ í†µí•´ ì‹¤ì‹œê°„ ì˜ìƒì„ ì´¬ì˜í•˜ê³  ì²˜ë¦¬í•˜ì—¬ ê°ì²´ ì¸ì‹, ê²½ë¡œ ê³„íš ë“±ì— í™œìš©í•©ë‹ˆë‹¤.
+4. **ì›ê²© ëª¨ë‹ˆí„°ë§ ë° ì œì–´**: ì›¹ ê¸°ë°˜ ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ í†µí•´ ë“œë¡ ì˜ ìƒíƒœë¥¼ ì‹¤ì‹œê°„ìœ¼ë¡œ ëª¨ë‹ˆí„°ë§í•˜ê³  ì›ê²©ìœ¼ë¡œ ì œì–´í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+5. **ìžìœ¨ ë¹„í–‰ ê¸°ëŠ¥**: GPS ë°ì´í„°ì™€ ì„¼ì„œ ì •ë³´ë¥¼ í™œìš©í•˜ì—¬ ì‚¬ì „ í”„ë¡œê·¸ëž˜ë°ëœ ê²½ë¡œë¥¼ ìžë™ìœ¼ë¡œ ë¹„í–‰í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+6. **ë°ì´í„° ë¡œê¹… ë° ë¶„ì„**: ë¹„í–‰ ì¤‘ ìˆ˜ì§‘ëœ ëª¨ë“  ë°ì´í„°ë¥¼ ì €ìž¥í•˜ê³  í›„ì²˜ë¦¬ ë¶„ì„ì„ ìœ„í•œ ë„êµ¬ë¥¼ ì œê³µí•©ë‹ˆë‹¤.
+
+## íŒŒì¼ êµ¬ì¡°
+
+- arduino_code/
+  - drone_controller/
+    - drone_controller.ino: ë§ˆì´í¬ë¡œì»¨íŠ¸ë¡¤ëŸ¬ìš© ë©”ì¸ ì½”ë“œ
+    - sensor_module.h: ì„¼ì„œ ë°ì´í„° ì²˜ë¦¬ë¥¼ ìœ„í•œ í—¤ë” íŒŒì¼
+    - motor_control.h: ëª¨í„° ì œì–´ ê´€ë ¨ í•¨ìˆ˜ë“¤ì„ í¬í•¨í•œ í—¤ë” íŒŒì¼
+    - pid_controller.h: PID ì œì–´ ì•Œê³ ë¦¬ì¦˜ êµ¬í˜„
+- raspberry_pi_code/
+  - main.py: ì‹±ê¸€ ë³´ë“œ ì»´í“¨í„°ì˜ ë©”ì¸ ì‹¤í–‰ íŒŒì¼
+  - drone_comm.py: ë“œë¡ ê³¼ì˜ í†µì‹ ì„ ê´€ë¦¬í•˜ëŠ” ëª¨ë“ˆ
+  - camera_module.py: ì¹´ë©”ë¼ ì œì–´ ë° ì˜ìƒ ì²˜ë¦¬ ëª¨ë“ˆ
+  - flight_controller.py: ë¹„í–‰ ì œì–´ ì•Œê³ ë¦¬ì¦˜ êµ¬í˜„
+  - data_logger.py: ì„¼ì„œ ë°ì´í„° ë¡œê¹… ë° ë¶„ì„ ëª¨ë“ˆ
+  - web_interface/: ì›¹ ê¸°ë°˜ ëª¨ë‹ˆí„°ë§ ë° ì œì–´ ì¸í„°íŽ˜ì´ìŠ¤
+
+## ì„¤ì¹˜ ë° ì„¤ì •
+
+(ì„¤ì¹˜ ë° ì„¤ì • ë°©ë²•ì— ëŒ€í•œ ìƒì„¸í•œ ì•ˆë‚´ë¥¼ ì—¬ê¸°ì— ì¶”ê°€)
+
+## ì‚¬ìš© ë°©ë²•
+
+(ì‹œìŠ¤í…œ ì‚¬ìš© ë°©ë²•ì— ëŒ€í•œ ë‹¨ê³„ë³„ ê°€ì´ë“œë¥¼ ì—¬ê¸°ì— ì¶”ê°€)
+
+## ê¸°ì—¬ ë°©ë²•
+
+(í”„ë¡œì íŠ¸ì— ê¸°ì—¬í•˜ëŠ” ë°©ë²•, ì½”ë“œ ìŠ¤íƒ€ì¼ ê°€ì´ë“œ, í’€ ë¦¬í€˜ìŠ¤íŠ¸ í”„ë¡œì„¸ìŠ¤ ë“±ì„ ì„¤ëª…)
+
+## ë¼ì´ì„ ìŠ¤
+
+ì´ í”„ë¡œì íŠ¸ëŠ” MIT ë¼ì´ì„ ìŠ¤ í•˜ì— ë°°í¬ë©ë‹ˆë‹¤. ìžì„¸í•œ ë‚´ìš©ì€ LICENSE íŒŒì¼ì„ ì°¸ì¡°í•˜ì„¸ìš”.
+
+## ì—°ë½ì²˜
+
+í”„ë¡œì íŠ¸ì— ëŒ€í•œ ì§ˆë¬¸ì´ë‚˜ ì œì•ˆì‚¬í•­ì´ ìžˆìœ¼ì‹œë©´ [ì´ë©”ì¼ ì£¼ì†Œ]ë¡œ ì—°ë½ì£¼ì‹œê¸° ë°”ëžë‹ˆë‹¤.
