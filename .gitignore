@@ -1,0 +1,52 @@
+# Flutter / Dart
+commissioning_project/controller/build/
+commissioning_project/controller/.dart_tool/
+commissioning_project/controller/.packages
+commissioning_project/controller/.flutter-plugins
+commissioning_project/controller/.flutter-plugins-dependencies
+commissioning_project/controller/windows/flutter/ephemeral/
+commissioning_project/controller/android/.gradle/
+commissioning_project/controller/android/app/build/
+commissioning_project/controller/android/local.properties
+commissioning_project/controller/.metadata
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude Code
+.claude/
+CLAUDE.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Legacy scaffolding (not part of active project)
+commissioning_project/arduino_code/
+commissioning_project/data_collection/
+commissioning_project/data_processing/
+commissioning_project/feedback/
+commissioning_project/reports/
+commissioning_project/resources/
+commissioning_project/raspberry_pi_code/
+commissioning_project/config/
+create_commissioning_project.py
+
+# Build outputs
+*.exe
+*.dll
+*.so
+*.dylib
