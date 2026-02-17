@@ -31,25 +31,23 @@ Captures RGB/thermal images and environmental data (temperature, humidity, dust)
 
 ```
 Cx/
-├── commissioning_project/
-│   ├── controller/              # Flutter app (PC + Android)
-│   │   ├── lib/
-│   │   │   ├── main.dart        # App entry, MultiProvider setup
-│   │   │   ├── models/          # Data models (telemetry, mission, config)
-│   │   │   ├── services/        # Connection, telemetry, settings
-│   │   │   ├── screens/         # Dashboard, flight, camera, mission, data, settings
-│   │   │   └── widgets/         # Reusable UI components
-│   │   ├── android/             # Android platform
-│   │   ├── windows/             # Windows platform
-│   │   └── web/                 # Web platform
-│   ├── companion/               # Raspberry Pi code (Python)
-│   │   └── test_server.py       # Mock server for testing without hardware
-│   ├── planning/                # Design docs, hardware list
-│   │   └── hardware_shopping_list.md
-│   ├── arduino_code/            # Legacy (replaced by Betaflight FC)
-│   ├── raspberry_pi_code/       # Legacy skeleton code
-│   └── config/                  # Configuration files
-└── CLAUDE.md                    # AI assistant project rules
+└── commissioning_project/
+    ├── controller/              # Flutter app (PC + Android)
+    │   ├── lib/
+    │   │   ├── main.dart        # App entry, MultiProvider setup
+    │   │   ├── models/          # Data models (telemetry, mission, config, commands)
+    │   │   ├── services/        # Connection, telemetry, camera, mission, settings
+    │   │   ├── screens/         # Dashboard, flight, camera, mission, data, settings
+    │   │   └── widgets/         # Joystick, attitude indicator, MJPEG viewer, etc.
+    │   ├── test/                # Unit + widget tests
+    │   ├── android/             # Android platform
+    │   ├── windows/             # Windows platform
+    │   └── web/                 # Web platform
+    ├── companion/               # Raspberry Pi code (Python)
+    │   └── test_server.py       # Mock server for development without hardware
+    └── planning/                # Design docs
+        ├── hardware_shopping_list.md
+        └── frame_design_spec.md
 ```
 
 ## Getting Started
@@ -57,9 +55,10 @@ Cx/
 ### Prerequisites
 
 - Flutter SDK 3.41+ ([install](https://docs.flutter.dev/get-started/install))
-- Python 3.10+ (for mock server)
+- Python 3.10+ with `websockets` package (for mock server)
 - Android SDK 36 (for Android builds)
 - Visual Studio Build Tools 2022 (for Windows builds)
+- Optional: `Pillow` Python package (for dynamic mock camera frames)
 
 ### Run the Controller App
 
@@ -85,14 +84,15 @@ flutter build apk         # Android APK
 flutter build web         # Web app
 ```
 
-## Development Status
+## Controller App Features
 
-- [x] Phase 1: Foundation (connection, telemetry, dashboard)
-- [ ] Phase 2: Manual flight control (joystick, attitude indicator)
-- [ ] Phase 3: Camera feeds (RGB + thermal MJPEG)
-- [ ] Phase 4: Mission planning (waypoint editor)
-- [ ] Phase 5: Data review (sensor display, image gallery)
-- [ ] Phase 6: Settings, polish, testing
+- **Dashboard**: Connection controls, arm/disarm, telemetry summary, sensor gauges, alerts
+- **Flight Control**: Dual virtual joystick (Mode 2), keyboard support (WASD/arrows), attitude indicator, flight mode selector
+- **Camera**: Live RGB + thermal MJPEG feeds, snapshot capture, recording toggle
+- **Mission Planning**: 2D grid waypoint editor, waypoint actions (photo/hold), mission upload/execute/pause
+- **Data Review**: Flight log charts, sensor history, snapshot gallery
+- **Settings**: Network config, drone parameters, joystick calibration
+- **Safety**: Persistent E-STOP button on every screen, connection loss detection, wakelock during flight
 
 ## Key Design Decisions
 
@@ -103,7 +103,14 @@ flutter build web         # Web app
 
 ## Hardware
 
-See [hardware_shopping_list.md](planning/hardware_shopping_list.md) for full parts list with search keywords.
+- [Hardware Shopping List](planning/hardware_shopping_list.md) - Full parts list with search keywords
+- [Frame Design Spec](planning/frame_design_spec.md) - 250mm quadcopter frame spec for Siemens NX
+
+## Next Steps
+
+- Raspberry Pi companion software (Python: WebSocket server, camera pipeline, MSP to FC, sensor reading)
+- Drone frame CAD design in Siemens NX
+- Hardware assembly and integration testing
 
 ## License
 

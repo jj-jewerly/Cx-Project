@@ -1,0 +1,15 @@
+# Cx Companion - Python Dependencies
+
+# Core networking
+websockets>=12.0
+aiohttp>=3.9
+
+# Simulation camera frames (optional, falls back to static JPEG)
+Pillow>=10.0
+
+# Serial communication (Phase 2+)
+# pyserial>=3.5
+# pyserial-asyncio>=0.6
+
+# I2C sensors (Phase 3, RPi only)
+# smbus2>=0.4

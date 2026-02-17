@@ -1,0 +1,56 @@
+# Cx Companion Configuration
+# Set simulation = true to run on any PC without hardware
+simulation = true
+log_level = "INFO"
+snapshot_dir = "snapshots"
+
+[server]
+ws_port = 8765
+udp_port = 8766
+rgb_mjpeg_port = 8080
+thermal_mjpeg_port = 8081
+telemetry_hz = 10
+bind_address = "0.0.0.0"
+
+[fc]
+enabled = false
+serial_port = "/dev/ttyACM0"
+baud_rate = 115200
+
+[cameras.rgb]
+type = "picamera"
+enabled = true
+resolution = [640, 480]
+fps = 10
+
+[cameras.thermal]
+type = "thermal_mlx"
+enabled = true
+resolution = [32, 24]
+fps = 4
+
+[[sensors]]
+type = "bme280"
+enabled = true
+bus = "i2c:1"
+address = 118
+poll_hz = 1
+
+[[sensors]]
+type = "sds011"
+enabled = true
+bus = "uart:/dev/ttyUSB0"
+poll_hz = 1
+
+[[sensors]]
+type = "vl53l1x"
+enabled = true
+bus = "i2c:1"
+address = 41
+poll_hz = 20
+
+[[sensors]]
+type = "pmw3901"
+enabled = true
+bus = "spi:0"
+poll_hz = 20
